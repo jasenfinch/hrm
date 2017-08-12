@@ -9,6 +9,10 @@ hrmSetup <- function() {
     if (length(p) > 0) {
         walk(p,~{
             package <- packages[packages$Package == .,]
+            
+            if (package$Repository == 'cran') {
+                install.packages(package$Package,repos = 'https://cloud.r-project.org/')
+            }
 
             if (package$Repository == 'github') {
                 cat('Installing hrm:',package$Package,'\n',sep = ' ')
