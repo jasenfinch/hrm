@@ -7,10 +7,6 @@ hrmSetup <- function() {
     p <- packages$Package[!(packages$Package %in% installedPackages$Package)]
     
     if (length(p) > 0) {
-        installGithub <- function(profile,package) {
-            suppressMessages(devtools::install_github(stringr::str_c(profile,package,sep = '/')))
-        }
-        
         walk(p,~{
             package <- packages[packages$Package == .,]
 
