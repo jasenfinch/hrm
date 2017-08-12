@@ -11,7 +11,7 @@ hrmAttach <- function(){
         dplyr::filter(grepl(x = value,pattern = 'package')) %>%
         dplyr::mutate(value = stringr::str_replace_all(value,'package:','')) 
     
-    p <- packages$Package[!(packages$Package %in% isAttached$value)]
+    p <- packages$Package[packages$Load == T & !(packages$Package %in% isAttached$value)]
     if (length(p) > 1) {
         suppressPackageStartupMessages(
             purrr::walk(p,~{
