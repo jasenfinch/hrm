@@ -10,7 +10,9 @@ Imports: dplyr,
         stringr,
         tibble,
         BiocInstaller,
-        devtools
+        devtools,
+        xcms,
+        impute
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

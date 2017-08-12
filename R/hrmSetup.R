@@ -25,6 +25,7 @@ hrmSetup <- function() {
             if (package$Repository == 'github') {
                 installGithub(package$Profile,package$Package)
             }
+            Sys.sleep(2)
         })
     }
 }
