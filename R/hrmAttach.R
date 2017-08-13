@@ -15,7 +15,7 @@ hrmAttach <- function(){
     if (length(p) > 1) {
         suppressPackageStartupMessages(
             purrr::walk(p,~{
-                requireNamespace(.)
+                do.call('library',list(.))
                 cat('Loading hrm:',.,'\n',sep = ' ')
             }
             ))
