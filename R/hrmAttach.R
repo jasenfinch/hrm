@@ -3,6 +3,7 @@
 #' @importFrom stringr str_replace_all
 #' @importFrom purrr walk
 #' @importFrom magrittr %>%
+#' @export
 
 hrmAttach <- function(){
     library(magrittr)

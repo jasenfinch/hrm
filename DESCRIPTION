@@ -14,8 +14,7 @@ Imports: dplyr,
         xcms,
         impute,
         rmarkdown,
-        DiagrammeR,
-        webshot
+        DiagrammeR
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
