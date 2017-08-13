@@ -12,9 +12,7 @@ Imports: dplyr,
         BiocInstaller,
         devtools,
         xcms,
-        impute,
-        rmarkdown,
-        DiagrammeR
+        impute
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
