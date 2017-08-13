@@ -9,7 +9,7 @@ hrmUpdate <- function() {
             package <- packages[packages$Package == .,]
             
             if (package$Repository == 'github') {
-                cat('Installing hrm:',package$Package,'\n',sep = ' ')
+                cat('Updating hrm:',package$Package,'\n',sep = ' ')
                 installGithub(package$Profile,package$Package)
             }
             Sys.sleep(2)

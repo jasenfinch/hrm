@@ -1,6 +1,6 @@
 #' @importFrom BiocInstaller biocLite
 #' @importFrom devtools install_github
-#' @export
+#' @importFrom utils installed.packages
 
 hrmSetup <- function() {
     installedPackages <- tibble::as_tibble(installed.packages())

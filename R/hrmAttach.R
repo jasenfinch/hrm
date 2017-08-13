@@ -3,10 +3,9 @@
 #' @importFrom stringr str_replace_all
 #' @importFrom purrr walk
 #' @importFrom magrittr %>%
-#' @export
 
 hrmAttach <- function(){
-    library(magrittr)
+    requireNamespace('magrittr')
     isAttached <- search() %>%
         tibble::as_tibble() %>%
         dplyr::filter(grepl(x = value,pattern = 'package')) %>%
@@ -16,7 +15,7 @@ hrmAttach <- function(){
     if (length(p) > 1) {
         suppressPackageStartupMessages(
             purrr::walk(p,~{
-                library(.,character.only = T)
+                requireNamespace(.)
                 cat('Loading hrm:',.,'\n',sep = ' ')
             }
             ))
