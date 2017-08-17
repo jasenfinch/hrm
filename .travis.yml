@@ -19,7 +19,7 @@ r_github_packages:
  - jasenfinch/profilePro
  - wilsontom/FIEmspro
  - jasenfinch/metabolyseR
- - jasenfinch/metaboWorklows
+ - jasenfinch/metaboWorkflows
  - jasenfinch/metaboVis
  
 notifications:
