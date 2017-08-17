@@ -1,5 +1,5 @@
-.onAttach <- function(...){
-    hrmSetup()
-    hrmUpdate()
-    hrmAttach()
-}
+# .onAttach <- function(...){
+#     hrmSetup()
+#     hrmUpdate()
+#     hrmAttach()
+# }

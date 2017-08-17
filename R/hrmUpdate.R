@@ -1,5 +1,6 @@
 #' @importFrom dplyr bind_rows
 #' @importFrom tibble tibble
+#' @export
 
 hrmUpdate <- function() {
     walk(packages$Package,~{
