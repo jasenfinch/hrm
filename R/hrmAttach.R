@@ -1,3 +1,5 @@
+#' hrmAttach
+#' @description Load hrm packages.
 #' @importFrom tibble as_tibble
 #' @importFrom dplyr filter mutate
 #' @importFrom stringr str_replace_all

@@ -1,3 +1,5 @@
+#' hrmUpdate
+#' @description  Update hrm packages.
 #' @importFrom dplyr bind_rows
 #' @importFrom tibble tibble
 #' @export

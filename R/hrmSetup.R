@@ -1,3 +1,5 @@
+#' hrmSetup
+#' @description Install hrm packages.
 #' @importFrom BiocInstaller biocLite
 #' @importFrom devtools install_github
 #' @importFrom utils installed.packages
