@@ -10,6 +10,18 @@ apt_packages:
  - udunits-bin
  - libudunits2-dev
  
+r_github_packages:
+ - jasenfinch/binneR
+ - jasenfinch/binneRlyse
+ - jasenfinch/metaboData
+ - jasenfinch/mzAnnotation
+ - jasenfinch/MFassign
+ - jasenfinch/profilePro
+ - wilsontom/FIEmspro
+ - jasenfinch/metabolyseR
+ - jasenfinch/metaboWorklows
+ - jasenfinch/metaboVis
+ 
 notifications:
   email:
     on_success: change
