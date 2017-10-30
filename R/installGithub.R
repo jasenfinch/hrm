@@ -6,7 +6,6 @@ installGithub <- function(profile,package) {
                                               "Imports", 
                                               "LinkingTo", 
                                               "Suggests", 
-                                              "Enhances"),
-                             quiet = T
+                                              "Enhances")
     )
 }
