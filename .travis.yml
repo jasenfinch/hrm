@@ -12,8 +12,12 @@ addons:
    - udunits-bin
    - libudunits2-dev
 
+before_install:
+    - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
+    - chmod 755 ./travis-tool.sh
+    
 script:
- - travis_wait 40 run_tests
+ - travis_wait 40 ./travis-tool.sh run_tests
  
 after_success:
   - Rscript -e 'covr::codecov()'
