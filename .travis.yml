@@ -8,13 +8,11 @@ warnings_are_errors: true
 addons:
  apt:
   packages:
-   - maven
    - libnetcdf-dev
    - udunits-bin
    - libudunits2-dev
 
-install: 
- - travis_wait 40 mvn install
+install: travis_wait 40 
  
 after_success:
   - Rscript -e 'covr::codecov()'
