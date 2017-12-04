@@ -8,18 +8,6 @@ apt_packages:
  - libnetcdf-dev
  - udunits-bin
  - libudunits2-dev
- 
-r_github_packages:
- - jasenfinch/binneR
- - jasenfinch/binneRlyse
- - jasenfinch/metaboData
- - jasenfinch/mzAnnotation
- - jasenfinch/MFassign
- - jasenfinch/profilePro
- - wilsontom/FIEmspro
- - jasenfinch/metabolyseR
- - jasenfinch/metaboWorkflows
- - jasenfinch/metaboVis
 
 after_success:
   - Rscript -e 'covr::codecov()'
