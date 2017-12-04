@@ -12,7 +12,8 @@ addons:
    - udunits-bin
    - libudunits2-dev
 
-install: travis_wait 40 
+script:
+ - travis_wait 40 ./travis-tool.sh run_tests
  
 after_success:
   - Rscript -e 'covr::codecov()'
