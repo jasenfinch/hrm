@@ -3,6 +3,7 @@
 language: R
 sudo: true
 bioc_required: true
+warnings_are_errors: true
 
 apt_packages:
  - libnetcdf-dev
