@@ -5,6 +5,8 @@
 #' @importFrom stringr str_replace_all
 #' @importFrom purrr walk
 #' @importFrom magrittr %>%
+#' @importFrom cli rule
+#' @importFrom crayon bold green
 #' @export
 
 hrmAttach <- function(){
@@ -16,9 +18,13 @@ hrmAttach <- function(){
     
     p <- packages$Package[packages$Load == T & !(packages$Package %in% isAttached$value)]
     if (length(p) > 1) {
+        cli::rule(
+            left = crayon::bold("Attaching packages"),
+            right = paste0("hrm ", packageVersion("hrm"))
+        ) %>% cat('\n')
         suppressPackageStartupMessages(
             purrr::walk(p,~{
-                cat('Loading hrm:',.,'\n',sep = ' ')
+                cat(crayon::green(cli::symbol$tick),.,'\n',sep = ' ')
                 do.call('library',list(.))
             }
             ))
