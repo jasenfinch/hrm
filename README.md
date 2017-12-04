@@ -1,6 +1,6 @@
 # hrm
 
-[![Travis-CI Build Status](https://travis-ci.org/jasenfinch/hrm.svg?branch=master)](https://travis-ci.org/jasenfinch/hrm)
+[![Travis-CI Build Status](https://travis-ci.org/jasenfinch/hrm.svg?branch=master)](https://travis-ci.org/jasenfinch/hrm) [![Coverage Status](https://img.shields.io/codecov/c/github/jasenfinch/hrm/master.svg)](https://codecov.io/github/jasenfinch/hrm?branch=master)
 
 Easily install, load and update R packages for high resolution metabolomics analyses
 

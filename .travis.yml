@@ -21,7 +21,10 @@ r_github_packages:
  - jasenfinch/metabolyseR
  - jasenfinch/metaboWorkflows
  - jasenfinch/metaboVis
- 
+
+after_success:
+  - Rscript -e 'covr::codecov()'
+
 notifications:
   email:
     on_success: change
