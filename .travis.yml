@@ -5,15 +5,15 @@ sudo: true
 bioc_required: true
 warnings_are_errors: true
 
-install: 
- - maven
- - travis_wait 40 mvn install
-
 apt_packages:
+ - maven
  - libnetcdf-dev
  - udunits-bin
  - libudunits2-dev
 
+install: 
+ - travis_wait 40 mvn install
+ 
 after_success:
   - Rscript -e 'covr::codecov()'
 
