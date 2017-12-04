@@ -24,8 +24,10 @@ hrmAttach <- function(){
         ) %>% cat('\n')
         suppressPackageStartupMessages(
             purrr::walk(p,~{
-                cat(crayon::green(cli::symbol$tick),.,'\n',sep = ' ')
-                do.call('library',list(.))
+                package <- .
+                do.call('library',list(package))
+                version <- packageVersion(package) %>% as.character()
+                cat(crayon::green(cli::symbol$tick),crayon::blue(package),version,'\n',sep = ' ')
             }
             ))
     }

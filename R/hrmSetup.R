@@ -7,15 +7,8 @@
 
 hrmSetup <- function() {
     installedPackages <- tibble::as_tibble(installed.packages())
-    
-    if (!('BiocInstaller' %in% installedPackages$Package)) {
-        source("https://bioconductor.org/biocLite.R")
-        biocLite()
-    }
         
     p <- packages$Package[!(packages$Package %in% installedPackages$Package)]
-    
-    
     
     if (length(p) > 0) {
         walk(p,~{
