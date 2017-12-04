@@ -5,7 +5,9 @@ sudo: true
 bioc_required: true
 warnings_are_errors: true
 
-install: travis_wait 40 mvn install
+install: 
+ - maven
+ - travis_wait 40 mvn install
 
 apt_packages:
  - libnetcdf-dev
