@@ -19,7 +19,7 @@ hrmSetup <- function() {
                 installGithub(package$Profile,package$Package)
             }
             
-            if (package$Repository == 'bioconductor') {
+            if (package$Repository == 'cran' | package$Repository == 'bioconductor') {
                 biocLite(package$Package)
             }
             
