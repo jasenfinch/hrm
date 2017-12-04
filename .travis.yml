@@ -13,7 +13,7 @@ addons:
    - libudunits2-dev
 
 script:
- - travis_wait 40 ./travis-tool.sh run_tests
+ - travis_wait 40 run_tests
  
 after_success:
   - Rscript -e 'covr::codecov()'
