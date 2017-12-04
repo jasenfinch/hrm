@@ -5,11 +5,13 @@ sudo: true
 bioc_required: true
 warnings_are_errors: true
 
-apt_packages:
- - maven
- - libnetcdf-dev
- - udunits-bin
- - libudunits2-dev
+addons:
+ apt:
+  packages:
+   - maven
+   - libnetcdf-dev
+   - udunits-bin
+   - libudunits2-dev
 
 install: 
  - travis_wait 40 mvn install
