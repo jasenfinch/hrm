@@ -29,15 +29,8 @@ hrmSetup <- function() {
             if (package$Repository == 'bioconductor') {
                 biocLite(package$Package)
             }
+            
             Sys.sleep(2)
         })
     }
 }
-
-bioconductor <- tibble::tibble(Repository = 'bioconductor',
-                       Profile = NA,
-                       Package = c('impute','mzR','xcms'),
-                       Load = FALSE)
-packages <- dplyr::bind_rows(packages,bioconductor)
-
-save(packages,file = 'R/sysdata.rda')
