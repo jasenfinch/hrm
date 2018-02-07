@@ -16,7 +16,7 @@ Easily install, load and update R packages for high resolution metabolomics anal
 * [metabolyseR](https://github.com/jasenfinch/metabolyseR)
 * [metaboWorkflows](https://github.com/jasenfinch/metaboWorkflows)
 * [metaboVis](https://github.com/jasenfinch/metaboVis)
-
+* [metaboReports](https://github.com/jasenfinch/metaboReports)
 
 ### Installation
 
