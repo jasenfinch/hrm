@@ -7,9 +7,13 @@ bioc_required: true
 warnings_are_errors: true
 
 r:
-  - release
-  - devel
-
+ - release
+ - devel
+ 
+apt_packages:
+ - default-jre
+ - default-jdk
+ 
 addons:
  apt:
   packages:
@@ -17,6 +21,11 @@ addons:
    - udunits-bin
    - libudunits2-dev
 
+r_packages:
+ - rlang
+ - digest
+ - devtools
+ 
 before_install:
     - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
     - chmod 755 ./travis-tool.sh
