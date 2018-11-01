@@ -7,7 +7,6 @@ test_that('hrmSetup works',{
     installedPackages <- tibble::as_tibble(installed.packages())
     expect_true('hrm' %in% installedPackages$Package)
     expect_true('binneR' %in% installedPackages$Package)
-    expect_true('binneRlyse' %in% installedPackages$Package)
     expect_true('FIEmspro' %in% installedPackages$Package)
     expect_true('metaboData' %in% installedPackages$Package)
     expect_true('metabolyseR' %in% installedPackages$Package)
