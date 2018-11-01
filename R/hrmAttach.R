@@ -7,6 +7,7 @@
 #' @importFrom magrittr %>%
 #' @importFrom cli rule
 #' @importFrom crayon bold green
+#' @importFrom utils packageVersion
 #' @export
 
 hrmAttach <- function(){
