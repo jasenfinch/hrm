@@ -3,7 +3,7 @@
 export(hrmAttach)
 export(hrmSetup)
 export(hrmUpdate)
-importFrom(BiocInstaller,biocLite)
+importFrom(BiocManager,install)
 importFrom(cli,rule)
 importFrom(crayon,bold)
 importFrom(crayon,green)
