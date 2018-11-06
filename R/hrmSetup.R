@@ -1,6 +1,6 @@
 #' hrmSetup
 #' @description Install hrm packages.
-#' @importFrom BiocInstaller biocLite
+#' @importFrom BiocManager install
 #' @importFrom devtools install_github
 #' @importFrom utils installed.packages
 #' @export
@@ -20,7 +20,7 @@ hrmSetup <- function() {
             }
             
             if (package$Repository == 'cran' | package$Repository == 'bioconductor') {
-                biocLite(package$Package)
+                install(package$Package)
             }
             
             Sys.sleep(2)
