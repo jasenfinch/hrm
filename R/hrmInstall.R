@@ -3,7 +3,9 @@
 #' @param pckgs vector of hrm package names to install
 #' @param force TRUE or FALSE force install?
 #' @examples
+#' \dontrun{
 #' hrmInstall('hrm')
+#' }
 #' @export
 
 hrmInstall <- function(pckgs,force = F){
