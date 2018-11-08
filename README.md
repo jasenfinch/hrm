@@ -1,13 +1,14 @@
 # hrm
 
-[![Travis-CI Build Status](https://travis-ci.org/jasenfinch/hrm.svg?branch=master)](https://travis-ci.org/jasenfinch/hrm) [![Coverage Status](https://img.shields.io/codecov/c/github/jasenfinch/hrm/master.svg)](https://codecov.io/github/jasenfinch/hrm?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/jasenfinch/hrm.svg?branch=master)](https://travis-ci.org/jasenfinch/hrm) 
+[![Coverage Status](https://img.shields.io/codecov/c/github/jasenfinch/hrm/master.svg)](https://codecov.io/github/jasenfinch/hrm?branch=master)
 
 Easily install, load and update R packages for high resolution metabolomics analyses
 
 `hrm` packages include:
 
 * [FIEmspro](https://github.com/aberHRML/FIEmspro)
-* [metaboData](https://github.com/jasenfinch/metaboData)
+* [metaboData](https://github.com/aberHRML/metaboData)
 * [binneR](https://github.com/jasenfinch/binneR)
 * [mzAnnotation](https://github.com/jasenfinch/mzAnnotation)
 * [MFassign](https://github.com/jasenfinch/MFassign)
@@ -25,13 +26,18 @@ devtools::install_github('jasenfinch/hrm')
 ### Usage
 
 ```r
-## Install
+## Return available hrm packages
+hrmPackages()
+
+## Setup hrm packages from scratch
 hrm::hrmSetup()
+
+## Install on or more hrm packages
+hrm::hrmInstall(hrmPackages()[1])
 
 ## Update
 hrm::hrmUpdate()
 
 ## Load
 hrm::hrmAttach()
-
 ```
