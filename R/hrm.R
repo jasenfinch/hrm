@@ -1,2 +1,2 @@
 
-globalVariables('value')
+globalVariables('value','.','Load')

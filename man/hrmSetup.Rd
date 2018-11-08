@@ -7,5 +7,5 @@
 hrmSetup()
 }
 \description{
-Install hrm packages.
+Install hrm packages from scratch.
 }
