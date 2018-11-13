@@ -15,5 +15,7 @@ hrmInstall(pckgs, force = F)
 install one or more hrm packages.
 }
 \examples{
+\dontrun{
 hrmInstall('hrm')
+}
 }
