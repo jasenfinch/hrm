@@ -7,7 +7,7 @@
 hrmSetup <- function() {
     installedPackages <- tibble::as_tibble(installed.packages())
         
-    p <- packages$Package[!(packages$Package %in% installedPackages$Package)]
+    p <- packages$Package[!(packages$Package %in% installedPackages$Package) & packages$Install == T]
     
     if (length(p) > 0) {
         walk(p,~{
