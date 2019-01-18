@@ -3,6 +3,7 @@ context('Test Functions')
 
 test_that('hrmSetup works',{
     skip_on_travis()
+    skip_on_appveyor()
     hrmSetup()
     installedPackages <- tibble::as_tibble(installed.packages())
     expect_true('hrm' %in% installedPackages$Package)
@@ -22,10 +23,12 @@ test_that('hrmSetup works',{
 
 test_that('hrmUpdate works',{
     skip_on_travis()
+    skip_on_appveyor()
     hrmUpdate()
 })
 
 test_that('hrmAttach works',{
     skip_on_travis()
+    skip_on_appveyor()
     hrmAttach()
 })
