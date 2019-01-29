@@ -8,15 +8,15 @@ Easily install, load and update R packages for high resolution metabolomics anal
 
 `hrm` packages include:
 
-* [FIEmspro](https://github.com/aberHRML/FIEmspro)
 * [metaboData](https://github.com/aberHRML/metaboData)
-* [binneR](https://github.com/jasenfinch/binneR)
+* [binneR](https://github.com/aberHRML/binneR)
 * [mzAnnotation](https://github.com/jasenfinch/mzAnnotation)
 * [MFassign](https://github.com/jasenfinch/MFassign)
 * [profilePro](https://github.com/jasenfinch/profilePro)
 * [metabolyseR](https://github.com/jasenfinch/metabolyseR)
 * [metaboWorkflows](https://github.com/jasenfinch/metaboWorkflows)
 * [metaboReports](https://github.com/jasenfinch/metaboReports)
+* [metaboMisc](https://github.com/jasenfinch/metaboMisc)
 
 ### Installation
 
@@ -28,7 +28,7 @@ remotes::install_github('jasenfinch/hrm')
 
 ```r
 ## Return available hrm packages
-hrmPackages()
+hrm::hrmPackages()
 
 ## Setup hrm packages from scratch
 hrm::hrmSetup()
