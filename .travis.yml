@@ -19,13 +19,6 @@ addons:
    - libnetcdf-dev
    - udunits-bin
    - libudunits2-dev
-
-r_packages:
- - rlang
- - digest
- - devtools
- - covr
- - testthat
  
 after_success:
   - Rscript -e 'covr::codecov()'
