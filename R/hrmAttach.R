@@ -32,5 +32,5 @@ hrmAttach <- function(){
             }
             ))
     }
-    
+    do.call('library',list('tidyverse'))
 }
