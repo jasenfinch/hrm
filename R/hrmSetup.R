@@ -25,4 +25,8 @@ hrmSetup <- function() {
             Sys.sleep(2)
         })
     }
+    
+    if (!('tidyverse' %in% installedPackages$Package)) {
+        install('tidyverse')
+    }
 }
