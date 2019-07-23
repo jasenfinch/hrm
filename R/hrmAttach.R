@@ -28,7 +28,11 @@ hrmAttach <- function(){
                 package <- .
                 do.call('library',list(package))
                 version <- packageVersion(package) %>% as.character()
-                cat(crayon::green(cli::symbol$tick),crayon::blue(package),version,'\n',sep = ' ')
+                if (nchar(package) < 13) {
+                    cat(crayon::green(cli::symbol$tick),crayon::blue(package),'\t\t',version,'\n',sep = ' ')
+                } else {
+                    cat(crayon::green(cli::symbol$tick),crayon::blue(package),'\t',version,'\n',sep = ' ')
+                }
             }
             ))
     }
