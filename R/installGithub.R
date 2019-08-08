@@ -2,8 +2,9 @@
 
 installGithub <- function(profile,package,force = F) {
     install_github(stringr::str_c(profile,package,sep = '/'),
-                             build_opts = c("--no-resave-data", "--no-manual"), 
-                             dependencies = TRUE, 
-                             force = force
+                   build_vignettes = TRUE, 
+                   dependencies = TRUE, 
+                   force = force,
+                   upgrade = 'never'
     )
 }
