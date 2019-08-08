@@ -6,6 +6,7 @@
 
 hrmUpdate <- function() {
     suppressMessages(install(ask = F))
+    hrmSetup()
     walk(packages$Package,~{
         package <- packages[packages$Package == .,]
         
