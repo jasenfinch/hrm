@@ -1,6 +1,6 @@
 Package: hrm
 Title: Install, load and update R packages for high resolution metabolomics analyses
-Version: 0.6.6
+Version: 0.6.7
 Authors@R: person("Jasen", "Finch", email = "jsf9@aber.ac.uk", role = c("aut", "cre"))
 Description: Easily install, load and update R packages for high resolution metabolomics analyses.
 Depends: R (>= 3.5.0)
