@@ -11,5 +11,5 @@ test_that('hrmAttach works',{
 })
 
 test_that('hrmPackages works',{
-    expect_length(hrmPackages(),10)
+    expect_length(hrmPackages(),12)
 })
