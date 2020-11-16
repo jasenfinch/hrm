@@ -2,7 +2,7 @@
 % Please edit documentation in R/hrmPackages.R
 \name{hrmPackages}
 \alias{hrmPackages}
-\title{hrmPackages}
+\title{List hrm packages}
 \usage{
 hrmPackages()
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/hrmUpdate.R
 \name{hrmUpdate}
 \alias{hrmUpdate}
-\title{hrmUpdate}
+\title{Update hrm packages}
 \usage{
 hrmUpdate()
 }
