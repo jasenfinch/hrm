@@ -1,10 +1,10 @@
-#' hrmAttach
+#' Load hrm packages
 #' @description Load hrm packages.
 #' @importFrom stringr str_detect str_remove_all
 #' @importFrom purrr walk
 #' @importFrom magrittr %>%
-#' @importFrom cli rule
-#' @importFrom crayon bold green
+#' @importFrom cli rule symbol
+#' @importFrom crayon bold green white blue
 #' @importFrom utils packageVersion
 #' @export
 
@@ -19,19 +19,37 @@ hrmAttach <- function(){
         cli::rule(
             left = crayon::bold("Attaching packages"),
             right = paste0("hrm ", packageVersion("hrm"))
-        ) %>% cat('\n')
+        ) %>% 
+            paste0(.,collapse = ' ') %>%
+            white() %>%
+            message()
         suppressPackageStartupMessages(
-            purrr::walk(p,~{
-                package <- .
-                do.call('library',list(package))
-                version <- packageVersion(package) %>% as.character()
-                if (nchar(package) < 13) {
-                    cat(crayon::green(cli::symbol$tick),crayon::blue(package),'\t\t',version,'\n',sep = ' ')
-                } else {
-                    cat(crayon::green(cli::symbol$tick),crayon::blue(package),'\t',version,'\n',sep = ' ')
-                }
+            walk(p,~{
+                do.call('library',list(.x))
+                
+                version <- packageVersion(.x) %>%
+                    as.character()
+                
+                message(paste0(green(symbol$tick),
+                               ' ',
+                               blue(.x),
+                               tabs(.x),
+                               white(version),sep = ' '))
             }
             ))
     }
+    message('')
     do.call('library',list('tidyverse'))
+}
+
+#' @importFrom purrr map_dbl
+
+tabs <- function(package){
+    if (nchar(package) <= 13) {
+        ntabs <- 2
+    } else {
+        ntabs <- 1
+    }
+    rep('\t',ntabs) %>%
+        paste0(collapse = '')
 }
