@@ -1,8 +1,10 @@
 # hrm
 
-[![Travis-CI Build Status](https://travis-ci.org/jasenfinch/hrm.svg?branch=master)](https://travis-ci.org/jasenfinch/hrm) 
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jasenfinch/hrm?branch=master&svg=true)](https://ci.appveyor.com/project/jasenfinch/hrm)
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R build status](https://github.com/jasenfinch/hrm/workflows/R-CMD-check/badge.svg)](https://github.com/jasenfinch/hrm/actions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/jasenfinch/hrm/master.svg)](https://codecov.io/github/jasenfinch/hrm?branch=master)
+<!-- badges: end -->
 
 Easily install, load and update R packages for high resolution metabolomics analyses
 
@@ -10,15 +12,19 @@ Easily install, load and update R packages for high resolution metabolomics anal
 
 * [metaboData](https://github.com/aberHRML/metaboData)
 * [binneR](https://github.com/aberHRML/binneR)
+* [metabolyseR](https://github.com/jasenfinch/metabolyseR)
+* [profilePro](https://github.com/jasenfinch/profilePro)
 * [mzAnnotation](https://github.com/jasenfinch/mzAnnotation)
 * [MFassign](https://github.com/jasenfinch/MFassign)
-* [profilePro](https://github.com/jasenfinch/profilePro)
-* [metabolyseR](https://github.com/jasenfinch/metabolyseR)
+*[construction](https://github.com/jasenfinch/construction)
+* [metaboMisc](https://github.com/jasenfinch/metaboMisc)
 * [metaboWorkflows](https://github.com/jasenfinch/metaboWorkflows)
 * [metaboReports](https://github.com/jasenfinch/metaboReports)
-* [metaboMisc](https://github.com/jasenfinch/metaboMisc)
+
 
 ### Installation
+
+Install the `hrm` package from GitHub using:
 
 ```r
 remotes::install_github('jasenfinch/hrm')
