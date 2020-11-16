@@ -7,11 +7,12 @@
 
 hrmUpdate <- function() {
     suppressMessages(install(ask = FALSE))
-    walk(hrmPackages(),~{
+    lapply(hrmPackages(),function(.x){
         package <- packages[packages$Package == .x,]
         
         if (package$Repository == 'github') {
             installGithub(package$Profile,package$Package)
         }
     })
+    invisible()
 }
