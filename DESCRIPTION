@@ -12,10 +12,31 @@ Imports: dplyr,
         BiocManager,
         remotes,
         cli,
-        crayon
+        crayon,
+        tidyverse,
+        metaboData,
+        binneR,
+        metabolyseR,
+        profilePro,
+        mzAnnotation,
+        MFassign,
+        construction,
+        metaboMisc,
+        metaboWorkflows,
+        metaboReports
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Suggests: testthat,
     covr
+Remotes: aberHRML/metaboData,
+        aberHRML/binneR,
+        jasenfinch/metabolyseR,
+        jasenfinch/profilePro,
+        jasenfinch/mzAnnotation,
+        jasenfinch/MFassign,
+        jasenfinch/construction,
+        jasenfinch/metaboMisc,
+        jasenfinch/metaboWorkflows,
+        jasenfinch/metaboReports
