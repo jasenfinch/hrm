@@ -5,7 +5,5 @@
 #' @export
 
 hrmPackages <- function(){
-    packages %>%
-        filter(Load == TRUE) %>%
-        .$Package
+    packages$Package
 }

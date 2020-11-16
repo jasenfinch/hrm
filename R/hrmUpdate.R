@@ -2,20 +2,16 @@
 #' @description  Update hrm packages.
 #' @importFrom dplyr bind_rows
 #' @importFrom tibble tibble
+#' @importFrom BiocManager install
 #' @export
 
 hrmUpdate <- function() {
-    suppressMessages(install(ask = F))
-    hrmSetup()
-    walk(packages$Package,~{
-        package <- packages[packages$Package == .,]
+    suppressMessages(install(ask = FALSE))
+    walk(hrmPackages(),~{
+        package <- packages[packages$Package == .x,]
         
         if (package$Repository == 'github') {
-            success <- installGithub(package$Profile,package$Package)
-            # if (success == T) {
-            #     cat('Updating hrm:',package$Package,'\n',sep = ' ')
-            # }
+            installGithub(package$Profile,package$Package)
         }
-        Sys.sleep(2)
     })
 }

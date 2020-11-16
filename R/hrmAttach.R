@@ -1,8 +1,6 @@
 #' hrmAttach
 #' @description Load hrm packages.
-#' @importFrom tibble as_tibble
-#' @importFrom dplyr filter mutate
-#' @importFrom stringr str_replace_all
+#' @importFrom stringr str_detect str_remove_all
 #' @importFrom purrr walk
 #' @importFrom magrittr %>%
 #' @importFrom cli rule
@@ -11,13 +9,12 @@
 #' @export
 
 hrmAttach <- function(){
-    requireNamespace('magrittr')
     isAttached <- search() %>%
-        tibble::as_tibble() %>%
-        dplyr::filter(grepl(x = value,pattern = 'package')) %>%
-        dplyr::mutate(value = stringr::str_replace_all(value,'package:','')) 
+      .[str_detect(.,'package:')] %>%
+        str_remove_all('package:')
     
-    p <- packages$Package[packages$Load == T & !(packages$Package %in% isAttached$value)]
+    p <- hrmPackages()[!(hrmPackages() %in% isAttached)]
+    
     if (length(p) > 1) {
         cli::rule(
             left = crayon::bold("Attaching packages"),
