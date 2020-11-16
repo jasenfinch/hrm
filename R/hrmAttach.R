@@ -1,40 +1,77 @@
-#' hrmAttach
+#' Load hrm packages
 #' @description Load hrm packages.
-#' @importFrom tibble as_tibble
-#' @importFrom dplyr filter mutate
-#' @importFrom stringr str_replace_all
-#' @importFrom purrr walk
+#' @importFrom stringr str_detect str_remove_all
+#' @importFrom purrr map_chr
 #' @importFrom magrittr %>%
-#' @importFrom cli rule
-#' @importFrom crayon bold green
+#' @importFrom cli rule symbol
+#' @importFrom crayon bold green white blue col_align col_nchar
 #' @importFrom utils packageVersion
 #' @export
 
 hrmAttach <- function(){
-    requireNamespace('magrittr')
-    isAttached <- search() %>%
-        tibble::as_tibble() %>%
-        dplyr::filter(grepl(x = value,pattern = 'package')) %>%
-        dplyr::mutate(value = stringr::str_replace_all(value,'package:','')) 
+  isAttached <- search() %>%
+    .[str_detect(.,'package:')] %>%
+    str_remove_all('package:')
+  
+  p <- hrmPackages()[!(hrmPackages() %in% isAttached)]
+  
+  if (length(p) > 1) {
+    cli::rule(
+      left = crayon::bold("Attaching packages"),
+      right = paste0("hrm ", packageVersion("hrm"))
+    ) %>% 
+      paste0(.,collapse = ' ') %>%
+      text_colour() %>%
+      message()
     
-    p <- packages$Package[packages$Load == T & !(packages$Package %in% isAttached$value)]
-    if (length(p) > 1) {
-        cli::rule(
-            left = crayon::bold("Attaching packages"),
-            right = paste0("hrm ", packageVersion("hrm"))
-        ) %>% cat('\n')
-        suppressPackageStartupMessages(
-            purrr::walk(p,~{
-                package <- .
-                do.call('library',list(package))
-                version <- packageVersion(package) %>% as.character()
-                if (nchar(package) < 13) {
-                    cat(crayon::green(cli::symbol$tick),crayon::blue(package),'\t\t',version,'\n',sep = ' ')
-                } else {
-                    cat(crayon::green(cli::symbol$tick),crayon::blue(package),'\t',version,'\n',sep = ' ')
-                }
-            }
-            ))
+    versions <- map_chr(p,~{.x %>%
+        packageVersion() %>%
+        as.character()
+    })
+    
+    suppressPackageStartupMessages(
+      lapply(p,function(x) do.call(library,list(x)))
+    )
+    
+    packages_load <- paste0(
+      crayon::green(cli::symbol$tick),
+      " ",
+      crayon::blue(format(p)),
+      " ",
+      crayon::col_align(text_colour(versions), 
+                        max(crayon::col_nchar(versions)))
+    )
+    
+    if (length(packages_load) %% 2 == 1) {
+      packages_load <- append(packages_load, "")
     }
-    do.call('library',list('tidyverse'))
+    
+    col1 <- seq_len(length(p) / 2)
+    info <- paste0(packages_load[col1], "     ", packages_load[-col1])  %>%
+      paste0(collapse = '\n')
+    
+    message(info)
+  }
+  do.call('library',list('tidyverse'))
+  
+  invisible()
+}
+
+#' @importFrom rstudioapi isAvailable hasFun getThemeInfo
+#' @importFrom crayon black
+
+text_colour <- function(x) {
+  
+  if (!isAvailable()) {
+    return(x)
+  }
+  
+  if (!hasFun("getThemeInfo")) {
+    return(x)
+  }
+  
+  theme <- getThemeInfo()
+  
+  if (isTRUE(theme$dark)) white(x) else black(x)
+  
 }

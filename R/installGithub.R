@@ -1,6 +1,6 @@
 #' @importFrom remotes install_github
 
-installGithub <- function(profile,package,force = F) {
+installGithub <- function(profile,package,force = FALSE) {
     install_github(stringr::str_c(profile,package,sep = '/'),
                    build_vignettes = TRUE, 
                    dependencies = TRUE, 

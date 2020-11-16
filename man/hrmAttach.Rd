@@ -2,7 +2,7 @@
 % Please edit documentation in R/hrmAttach.R
 \name{hrmAttach}
 \alias{hrmAttach}
-\title{hrmAttach}
+\title{Load hrm packages}
 \usage{
 hrmAttach()
 }

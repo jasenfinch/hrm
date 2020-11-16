@@ -3,3 +3,6 @@
 ^\.Rproj\.user$
 ^\.travis\.yml$
 ^codecov\.yml$
+^\.github$
+^docs
+^README\.Rmd$
