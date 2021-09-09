@@ -35,8 +35,7 @@ LazyData: true
 RoxygenNote: 7.1.1
 Suggests: testthat,
     covr
-Remotes: aberHRML/metaboData,
-        aberHRML/binneR,
+Remotes: aberHRML/binneR,
         jasenfinch/metabolyseR,
         jasenfinch/profilePro,
         jasenfinch/mzAnnotation,
