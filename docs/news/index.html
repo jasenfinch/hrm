@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">hrm</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.0</span>
       </span>
     </div>
 
@@ -114,6 +114,16 @@
       <small>Source: <a href='https://github.com/jasenfinch/hrm/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="hrm-090" class="section level1">
+<h1 class="page-header" data-toc-text="0.9.0">
+<a href="#hrm-090" class="anchor"></a>hrm 0.9.0</h1>
+<ul>
+<li><p>Temporarily removed <a href="https://github.com/jasenfinch/metaboReports"><code>metaboReports</code></a> due to breaking changes in <a href="https://jasenfinch.github.io/metaboWorkflows/"><code>metaboWorkflows</code></a> v0.9.0.</p></li>
+<li><p>Added dependency packages <a href="https://jasenfinch.github.io/chunky/"><code>chunky</code></a> and <a href="https://jasenfinch.github.io/projecttemplates/"><code>projecttemplates</code></a> of <a href="https://jasenfinch.github.io/metaboWorkflows"><code>metaboWorkflows</code></a> to ensure they can be updated using <code><a href="../reference/hrmUpdate.html">hrm::hrmUpdate()</a></code>.</p></li>
+<li><p>Reduced the number of package imports by removing those that are dependencies of other imported packages.</p></li>
+<li><p>The loading of <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> packages is now optional using the <code>tidyverse</code> argument in <code><a href="../reference/hrmAttach.html">hrm::hrmAttach()</a></code>.</p></li>
+</ul>
+</div>
     <div id="hrm-081" class="section level1">
 <h1 class="page-header" data-toc-text="0.8.1">
 <a href="#hrm-081" class="anchor"></a>hrm 0.8.1</h1>
