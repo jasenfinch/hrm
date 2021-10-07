@@ -4,7 +4,10 @@
 \alias{hrmAttach}
 \title{Load hrm packages}
 \usage{
-hrmAttach()
+hrmAttach(tidyverse = TRUE)
+}
+\arguments{
+\item{tidyverse}{TRUE/FALSE also load the tidyverse package}
 }
 \description{
 Load hrm packages.

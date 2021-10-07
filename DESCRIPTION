@@ -1,6 +1,6 @@
 Package: hrm
 Title: Install, Load and Update R Packages for High Resolution Metabolomics Analyses
-Version: 0.8.1
+Version: 0.9.0
 Authors@R: person("Jasen", "Finch", email = "jsf9@aber.ac.uk", role = c("aut", "cre"))
 Description: Easily install, load and update R packages for high resolution metabolomics analyses.
 URL: jasenfinch.github.io/hrm/
@@ -18,30 +18,18 @@ Imports: dplyr,
         rstudioapi,
         tidyverse,
         metaboData,
-        binneR,
-        metabolyseR,
-        profilePro,
-        mzAnnotation,
-        MFassign,
         construction,
         composition,
         riches,
         metaboMisc,
-        metaboWorkflows,
-        metaboReports
-License: GPL-3
+        metaboWorkflows
+License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.1.2
 Suggests: testthat,
     covr
-Remotes: aberHRML/binneR,
-        jasenfinch/metabolyseR,
-        jasenfinch/profilePro,
-        jasenfinch/mzAnnotation,
-        jasenfinch/MFassign,
-        jasenfinch/construction,
+Remotes: jasenfinch/construction,
         jasenfinch/composition,
         jasenfinch/riches,
         jasenfinch/metaboMisc,
-        jasenfinch/metaboWorkflows,
-        jasenfinch/metaboReports
+        jasenfinch/metaboWorkflows

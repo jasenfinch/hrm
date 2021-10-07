@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R build
 status](https://github.com/jasenfinch/hrm/workflows/R-CMD-check/badge.svg)](https://github.com/jasenfinch/hrm/actions)
 [![Coverage
@@ -18,18 +18,32 @@ analyses of high resolution metabolomics data.
 
 `hrm` packages include:
 
--   [metaboData](https://github.com/aberHRML/metaboData)
--   [binneR](https://github.com/aberHRML/binneR)
--   [metabolyseR](https://github.com/jasenfinch/metabolyseR)
--   [profilePro](https://github.com/jasenfinch/profilePro)
--   [mzAnnotation](https://github.com/jasenfinch/mzAnnotation)
--   [MFassign](https://github.com/jasenfinch/MFassign)
--   [construction](https://github.com/jasenfinch/construction)
--   [composition](https://github.com/jasenfinch/composition)
--   [riches](https://github.com/jasenfinch/riches)
--   [metaboMisc](https://github.com/jasenfinch/metaboMisc)
--   [metaboWorkflows](https://github.com/jasenfinch/metaboWorkflows)
--   [metaboReports](https://github.com/jasenfinch/metaboReports)
+-   [metaboData](https://aberHRML.github.io/metaboData) - Example data
+    sets for metabolomics analyses
+-   [binneR](https://aberHRML.github.io/binneR) - Spectral Processing
+    for High Resolution Flow Infusion Mass Spectrometry
+-   [metabolyseR](https://jasenfinch.github.io/metabolyseR) - A tool kit
+    for pre-treatment, modelling, feature selection and correlation
+    analyses of metabolomics data
+-   [profilePro](https://jasenfinch.github.io/profilePro) - Unified
+    Input and Output for Processing of Metabolomic Profiling Experiments
+-   [mzAnnotation](https://jasenfinch.github.io/mzAnnotation) - Tools
+    for putative annotation of accurate m/z from electrospray ionisation
+    mass spectrometry data
+-   [MFassign](https://github.com/jasenfinch/MFassign) - Molecular
+    formula assignment for high resolution ESI metabolomics
+-   [construction](https://github.com/jasenfinch/construction) -
+    Consensus structural classifications for putative molecular formula
+    assignments
+-   [composition](https://github.com/jasenfinch/composition) -
+    Compositional analyses for metabolomics data
+-   [riches](https://jasenfinch.github.io/riches) - Structural and
+    functional enrichment for metabolomics data
+-   [metaboMisc](https://jasenfinch.github.io/metaboMisc) - A collection
+    of miscellaneous helper and linker functions for metabolomics
+    analyses
+-   [metaboWorkflows](https://jasenfinch.github.io/metaboWorkflows) -
+    Workflow Project Templates for Metabolomics Analyses
 
 ## Installation
 
@@ -47,17 +61,18 @@ Loading the `hrm` packages will load the included R packages.
 library(hrm)
 #> Warning in .recacheSubclasses(def@className, def, env): undefined subclass
 #> "numericVector" of class "Mnumeric"; definition not updated
-#> ── Attaching packages ───────────────────────────────────────────── hrm 0.8.0 ──
-#> ✓ metaboData      0.6.2      ✓ construction    0.2.10
-#> ✓ binneR          2.5.3      ✓ composition     0.1.4 
-#> ✓ metabolyseR     0.14.2     ✓ riches          0.2.1 
-#> ✓ profilePro      0.7.0      ✓ metaboMisc      0.5.5 
-#> ✓ mzAnnotation    1.7.5      ✓ metaboWorkflows 0.8.10
-#> ✓ MFassign        0.7.10     ✓ metaboReports   0.8.6
+#> ── Attaching packages ───────────────────────────────────────────── hrm 0.9.0 ──
+#> ✓ chunky           0.1.0   ✓ projecttemplates 0.5.1 
+#> ✓ metaboData       0.6.2   ✓ binneR           2.6.0 
+#> ✓ metabolyseR      0.14.3  ✓ profilePro       0.7.0 
+#> ✓ mzAnnotation     1.7.5   ✓ MFassign         0.7.10
+#> ✓ construction     0.2.10  ✓ composition      0.1.4 
+#> ✓ riches           0.2.1   ✓ metaboMisc       0.5.7 
+#> ✓ metaboWorkflows  0.9.0
 #> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-#> ✓ tibble  3.1.4     ✓ dplyr   1.0.7
-#> ✓ tidyr   1.1.3     ✓ stringr 1.4.0
-#> ✓ readr   2.0.1     ✓ forcats 0.5.1
+#> ✓ tibble  3.1.5     ✓ dplyr   1.0.7
+#> ✓ tidyr   1.1.4     ✓ stringr 1.4.0
+#> ✓ readr   2.0.2     ✓ forcats 0.5.1
 #> ✓ purrr   0.3.4
 #> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 #> x dplyr::collect()    masks xcms::collect()
@@ -65,6 +80,7 @@ library(hrm)
 #> x tidyr::expand()     masks S4Vectors::expand()
 #> x dplyr::filter()     masks stats::filter()
 #> x dplyr::first()      masks S4Vectors::first()
+#> x dplyr::glimpse()    masks tibble::glimpse(), metaboWorkflows::glimpse()
 #> x dplyr::groups()     masks xcms::groups()
 #> x dplyr::lag()        masks stats::lag()
 #> x ggplot2::Position() masks BiocGenerics::Position(), base::Position()
@@ -83,9 +99,10 @@ A vector of the current `hrm` packages can be found by:
 
 ``` r
 hrmPackages()
-#>  [1] "metaboData"      "binneR"          "metabolyseR"     "profilePro"     
-#>  [5] "mzAnnotation"    "MFassign"        "construction"    "composition"    
-#>  [9] "riches"          "metaboMisc"      "metaboWorkflows" "metaboReports"
+#>  [1] "chunky"           "projecttemplates" "metaboData"       "binneR"          
+#>  [5] "metabolyseR"      "profilePro"       "mzAnnotation"     "MFassign"        
+#>  [9] "construction"     "composition"      "riches"           "metaboMisc"      
+#> [13] "metaboWorkflows"
 ```
 
 `hrm` associated packages can be updated using:
