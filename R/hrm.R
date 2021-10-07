@@ -11,8 +11,7 @@ globalVariables('.')
 #' @importFrom composition keggPathways
 #' @importFrom riches enrichmentParameters
 #' @importFrom metaboMisc preTreatModes
-#' @importFrom metaboWorkflows workflowParameters
-#' @importFrom metaboReports report
+#' @importFrom metaboWorkflows defineWorkflow
 #' @importFrom tidyverse tidyverse_packages
 
 NULL
