@@ -1,5 +1,6 @@
 #' Load hrm packages
 #' @description Load hrm packages.
+#' @param tidyverse TRUE/FALSE also load the tidyverse package
 #' @importFrom stringr str_detect str_remove_all
 #' @importFrom purrr map_chr
 #' @importFrom magrittr %>%
@@ -8,7 +9,7 @@
 #' @importFrom utils packageVersion
 #' @export
 
-hrmAttach <- function(){
+hrmAttach <- function(tidyverse = TRUE){
   isAttached <- search() %>%
     .[str_detect(.,'package:')] %>%
     str_remove_all('package:')
@@ -52,7 +53,10 @@ hrmAttach <- function(){
     
     message(info)
   }
-  do.call('library',list('tidyverse'))
+  
+  if (isTRUE(tidyverse)){
+    do.call('library',list('tidyverse')) 
+  }
   
   invisible()
 }
