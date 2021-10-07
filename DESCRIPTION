@@ -27,8 +27,7 @@ Imports: dplyr,
         composition,
         riches,
         metaboMisc,
-        metaboWorkflows,
-        metaboReports
+        metaboWorkflows
 License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.1.2
@@ -43,5 +42,4 @@ Remotes: aberHRML/binneR,
         jasenfinch/composition,
         jasenfinch/riches,
         jasenfinch/metaboMisc,
-        jasenfinch/metaboWorkflows,
-        jasenfinch/metaboReports
+        jasenfinch/metaboWorkflows

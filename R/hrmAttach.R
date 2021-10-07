@@ -44,11 +44,13 @@ hrmAttach <- function(tidyverse = TRUE){
     )
     
     if (length(packages_load) %% 2 == 1) {
-      packages_load <- append(packages_load, "")
+      packages_load <- append(packages_load, " ")
     }
     
-    col1 <- seq_len(length(p) / 2)
-    info <- paste0(packages_load[col1], "     ", packages_load[-col1])  %>%
+    column_odd <- seq(1,length(packages_load),2)
+    column_even <- seq(2,length(packages_load),2)
+
+    info <- paste0(packages_load[column_odd], "  ", packages_load[column_even]) %>% 
       paste0(collapse = '\n')
     
     message(info)
