@@ -12,6 +12,7 @@ Imports: BiocManager,
         construction,
         crayon,
         dplyr,
+        grover,
         magrittr,
         metaboData,
         metaboMisc,
@@ -28,8 +29,9 @@ Encoding: UTF-8
 RoxygenNote: 7.1.2
 Suggests: testthat,
     covr
-Remotes: jasenfinch/construction,
-        jasenfinch/composition,
-        jasenfinch/riches,
+Remotes: jasenfinch/composition,
+        jasenfinch/construction,
+        jasenfinch/grover,
         jasenfinch/metaboMisc,
         jasenfinch/metaboWorkflows
+        jasenfinch/riches
