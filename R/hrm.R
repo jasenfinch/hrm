@@ -8,5 +8,6 @@ globalVariables('.')
 #' @importFrom metaboMisc preTreatModes
 #' @importFrom metaboWorkflows defineWorkflow
 #' @importFrom tidyverse tidyverse_packages
+#' @importFrom grover readGrover
 
 NULL

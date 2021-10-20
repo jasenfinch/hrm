@@ -25,8 +25,8 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: windows-latest, r: 'release'}
-          - {os: macOS-latest, r: 'release'}
+          #- {os: windows-latest, r: 'release'}
+          #- {os: macOS-latest, r: 'release'}
           - {os: ubuntu-20.04, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
           - {os: ubuntu-20.04, r: 'devel', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
 
@@ -65,7 +65,7 @@ jobs:
           do
             eval sudo $cmd
           done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
-          sudo apt-get install -y libopenbabel-dev libnetcdf-dev libglpk-dev texlive-base
+          sudo apt-get install -y libopenbabel-dev libnetcdf-dev libglpk-dev texlive-base libsodium-dev
 
       - name: Install dependencies
         run: |

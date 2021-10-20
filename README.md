@@ -20,6 +20,8 @@ analyses of high resolution metabolomics data.
 
 -   [metaboData](https://aberHRML.github.io/metaboData) - Example data
     sets for metabolomics analyses
+-   [grover](https://jasenfinch.github.io/grover) - Web API Framework
+    for Mass Spectrometry Data Transfer
 -   [binneR](https://aberHRML.github.io/binneR) - Spectral Processing
     for High Resolution Flow Infusion Mass Spectrometry
 -   [metabolyseR](https://jasenfinch.github.io/metabolyseR) - A tool kit
@@ -61,14 +63,14 @@ Loading the `hrm` packages will load the included R packages.
 library(hrm)
 #> Warning in .recacheSubclasses(def@className, def, env): undefined subclass
 #> "numericVector" of class "Mnumeric"; definition not updated
-#> ── Attaching packages ───────────────────────────────────────────── hrm 0.9.0 ──
+#> ── Attaching packages ───────────────────────────────────────────── hrm 0.9.1 ──
 #> ✓ chunky           0.1.0   ✓ projecttemplates 0.5.1 
-#> ✓ metaboData       0.6.2   ✓ binneR           2.6.0 
-#> ✓ metabolyseR      0.14.3  ✓ profilePro       0.7.0 
-#> ✓ mzAnnotation     1.7.5   ✓ MFassign         0.7.10
-#> ✓ construction     0.2.10  ✓ composition      0.1.4 
-#> ✓ riches           0.2.1   ✓ metaboMisc       0.5.7 
-#> ✓ metaboWorkflows  0.9.0
+#> ✓ metaboData       0.6.2   ✓ grover           1.0.7 
+#> ✓ binneR           2.6.0   ✓ metabolyseR      0.14.3
+#> ✓ profilePro       0.7.0   ✓ mzAnnotation     1.7.5 
+#> ✓ MFassign         0.7.10  ✓ construction     0.2.10
+#> ✓ composition      0.1.4   ✓ riches           0.2.1 
+#> ✓ metaboMisc       0.5.7   ✓ metaboWorkflows  0.9.0
 #> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
 #> ✓ tibble  3.1.5     ✓ dplyr   1.0.7
 #> ✓ tidyr   1.1.4     ✓ stringr 1.4.0
@@ -99,10 +101,10 @@ A vector of the current `hrm` packages can be found by:
 
 ``` r
 hrmPackages()
-#>  [1] "chunky"           "projecttemplates" "metaboData"       "binneR"          
-#>  [5] "metabolyseR"      "profilePro"       "mzAnnotation"     "MFassign"        
-#>  [9] "construction"     "composition"      "riches"           "metaboMisc"      
-#> [13] "metaboWorkflows"
+#>  [1] "chunky"           "projecttemplates" "metaboData"       "grover"          
+#>  [5] "binneR"           "metabolyseR"      "profilePro"       "mzAnnotation"    
+#>  [9] "MFassign"         "construction"     "composition"      "riches"          
+#> [13] "metaboMisc"       "metaboWorkflows"
 ```
 
 `hrm` associated packages can be updated using:

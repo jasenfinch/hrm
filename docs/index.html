@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">hrm</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.1</span>
       </span>
     </div>
 
@@ -80,6 +80,8 @@
 <li>
 <a href="https://aberHRML.github.io/metaboData">metaboData</a> - Example data sets for metabolomics analyses</li>
 <li>
+<a href="https://jasenfinch.github.io/grover">grover</a> - Web API Framework for Mass Spectrometry Data Transfer</li>
+<li>
 <a href="https://aberHRML.github.io/binneR">binneR</a> - Spectral Processing for High Resolution Flow Infusion Mass Spectrometry</li>
 <li>
 <a href="https://jasenfinch.github.io/metabolyseR">metabolyseR</a> - A tool kit for pre-treatment, modelling, feature selection and correlation analyses of metabolomics data</li>
@@ -114,14 +116,14 @@
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">hrm</span><span class="op">)</span>
 <span class="co">#&gt; Warning in .recacheSubclasses(def@className, def, env): undefined subclass</span>
 <span class="co">#&gt; "numericVector" of class "Mnumeric"; definition not updated</span>
-<span class="co">#&gt; ── Attaching packages ───────────────────────────────────────────── hrm 0.9.0 ──</span>
+<span class="co">#&gt; ── Attaching packages ───────────────────────────────────────────── hrm 0.9.1 ──</span>
 <span class="co">#&gt; ✓ chunky           0.1.0   ✓ projecttemplates 0.5.1 </span>
-<span class="co">#&gt; ✓ metaboData       0.6.2   ✓ binneR           2.6.0 </span>
-<span class="co">#&gt; ✓ metabolyseR      0.14.3  ✓ profilePro       0.7.0 </span>
-<span class="co">#&gt; ✓ mzAnnotation     1.7.5   ✓ MFassign         0.7.10</span>
-<span class="co">#&gt; ✓ construction     0.2.10  ✓ composition      0.1.4 </span>
-<span class="co">#&gt; ✓ riches           0.2.1   ✓ metaboMisc       0.5.7 </span>
-<span class="co">#&gt; ✓ metaboWorkflows  0.9.0</span>
+<span class="co">#&gt; ✓ metaboData       0.6.2   ✓ grover           1.0.7 </span>
+<span class="co">#&gt; ✓ binneR           2.6.0   ✓ metabolyseR      0.14.3</span>
+<span class="co">#&gt; ✓ profilePro       0.7.0   ✓ mzAnnotation     1.7.5 </span>
+<span class="co">#&gt; ✓ MFassign         0.7.10  ✓ construction     0.2.10</span>
+<span class="co">#&gt; ✓ composition      0.1.4   ✓ riches           0.2.1 </span>
+<span class="co">#&gt; ✓ metaboMisc       0.5.7   ✓ metaboWorkflows  0.9.0</span>
 <span class="co">#&gt; ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</span>
 <span class="co">#&gt; ✓ tibble  3.1.5     ✓ dplyr   1.0.7</span>
 <span class="co">#&gt; ✓ tidyr   1.1.4     ✓ stringr 1.4.0</span>
@@ -145,10 +147,10 @@
 <p>A vector of the current <code>hrm</code> packages can be found by:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/hrmPackages.html">hrmPackages</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt;  [1] "chunky"           "projecttemplates" "metaboData"       "binneR"          </span>
-<span class="co">#&gt;  [5] "metabolyseR"      "profilePro"       "mzAnnotation"     "MFassign"        </span>
-<span class="co">#&gt;  [9] "construction"     "composition"      "riches"           "metaboMisc"      </span>
-<span class="co">#&gt; [13] "metaboWorkflows"</span></code></pre></div>
+<span class="co">#&gt;  [1] "chunky"           "projecttemplates" "metaboData"       "grover"          </span>
+<span class="co">#&gt;  [5] "binneR"           "metabolyseR"      "profilePro"       "mzAnnotation"    </span>
+<span class="co">#&gt;  [9] "MFassign"         "construction"     "composition"      "riches"          </span>
+<span class="co">#&gt; [13] "metaboMisc"       "metaboWorkflows"</span></code></pre></div>
 <p><code>hrm</code> associated packages can be updated using:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="reference/hrmUpdate.html">hrmUpdate</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>

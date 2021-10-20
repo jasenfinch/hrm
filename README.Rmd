@@ -26,6 +26,7 @@ Easily install, load and update an R package ecosystem for performing analyses o
 `hrm` packages include:
 
 * [metaboData](https://aberHRML.github.io/metaboData) - Example data sets for metabolomics analyses
+* [grover](https://jasenfinch.github.io/grover) - Web API Framework for Mass Spectrometry Data Transfer
 * [binneR](https://aberHRML.github.io/binneR) - Spectral Processing for High Resolution Flow Infusion Mass Spectrometry
 * [metabolyseR](https://jasenfinch.github.io/metabolyseR) - A tool kit for pre-treatment, modelling, feature selection and correlation analyses of metabolomics data
 * [profilePro](https://jasenfinch.github.io/profilePro) - Unified Input and Output for Processing of Metabolomic Profiling Experiments
