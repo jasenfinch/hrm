@@ -6,23 +6,23 @@ Description: Easily install, load and update R packages for high resolution meta
 URL: jasenfinch.github.io/hrm/
 BugReports: https://github.com/jasenfinch/hrm/issues
 Depends: R (>= 3.5.0)
-Imports: dplyr,
+Imports: BiocManager,
+        cli,
+        composition,
+        construction,
+        crayon,
+        dplyr,
         magrittr,
+        metaboData,
+        metaboMisc,
+        metaboWorkflows,
         purrr,
+        remotes,
+        riches,
+        rstudioapi,
         stringr,
         tibble,
-        BiocManager,
-        remotes,
-        cli,
-        crayon,
-        rstudioapi,
-        tidyverse,
-        metaboData,
-        construction,
-        composition,
-        riches,
-        metaboMisc,
-        metaboWorkflows
+        tidyverse
 License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.1.2
