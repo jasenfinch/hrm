@@ -1,3 +1,7 @@
+# hrm 0.9.1
+
+* Added the [`grover`](https://jasenfinch.github.io/grover) package.
+
 # hrm 0.9.0
 
 * Temporarily removed [`metaboReports`](https://github.com/jasenfinch/metaboReports) due to breaking changes in [`metaboWorkflows`](https://jasenfinch.github.io/metaboWorkflows/) v0.9.0.
