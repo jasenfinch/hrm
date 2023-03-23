@@ -44,15 +44,11 @@ jobs:
         run: |
           sudo apt install libnetcdf-dev libglpk-dev texlive-base libsodium-dev libopenbabel-dev libeigen3-dev
           
-      - name: Annoyingly install some R dependencies
-        run: |
-          install.packages('BiocManager')
-          BiocManager::install('BiocParallel')
-        shell: Rscript {0}
-          
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck
+          extra-packages: |
+            any::rcmdcheck
+            bioc::BiocParallel
           needs: check
 
       - uses: r-lib/actions/check-r-package@v2

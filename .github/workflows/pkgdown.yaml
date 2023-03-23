@@ -32,16 +32,13 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           sudo apt install libnetcdf-dev libglpk-dev texlive-base libsodium-dev libopenbabel-dev libeigen3-dev
-          
-      - name: Annoyingly install some R dependencies
-        run: |
-          install.packages('BiocManager')
-          BiocManager::install('BiocParallel')
-        shell: Rscript {0}
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::pkgdown, local::.
+          extra-packages: |
+            any::pkgdown 
+            local::
+            bioc::BiocParallel
           needs: website
 
       - name: Build site
