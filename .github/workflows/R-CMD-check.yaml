@@ -49,6 +49,7 @@ jobs:
           extra-packages: |
             any::rcmdcheck
             bioc::BiocParallel
+            bioc::MSnbase
           needs: check
 
       - uses: r-lib/actions/check-r-package@v2
