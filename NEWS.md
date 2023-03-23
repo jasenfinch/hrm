@@ -1,3 +1,9 @@
+# hrm 0.9.2
+
+* Remove the {composition} package.
+
+* Updated {MFassign} to [{assignments}](https://aberhrml.github.io/assignments/) with package name change
+
 # hrm 0.9.1
 
 * Added the [`grover`](https://jasenfinch.github.io/grover) package.
