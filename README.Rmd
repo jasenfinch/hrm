@@ -17,23 +17,23 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R build status](https://github.com/jasenfinch/hrm/workflows/R-CMD-check/badge.svg)](https://github.com/jasenfinch/hrm/actions)
-[![Coverage Status](https://img.shields.io/codecov/c/github/jasenfinch/hrm/master.svg)](https://codecov.io/github/jasenfinch/hrm?branch=master)
+[![R-CMD-check](https://github.com/jasenfinch/hrm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jasenfinch/hrm/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/jasenfinch/hrm/branch/master/graph/badge.svg)](https://app.codecov.io/gh/jasenfinch/hrm?branch=master)
+[![GitHub release](https://img.shields.io/github/release/jasenfinch/hrm.svg)](https://GitHub.com/jasenfinch/hrm/releases/)
 <!-- badges: end -->
 
 Easily install, load and update an R package ecosystem for performing analyses of high resolution metabolomics data.
 
 `hrm` packages include:
 
-* [metaboData](https://aberHRML.github.io/metaboData) - Example data sets for metabolomics analyses
+* [metaboData](https://aberhrml.github.io/metaboData) - Example data sets for metabolomics analyses
 * [grover](https://jasenfinch.github.io/grover) - Web API Framework for Mass Spectrometry Data Transfer
-* [binneR](https://aberHRML.github.io/binneR) - Spectral Processing for High Resolution Flow Infusion Mass Spectrometry
+* [binneR](https://aberhrml.github.io/binneR) - Spectral Processing for High Resolution Flow Infusion Mass Spectrometry
 * [metabolyseR](https://jasenfinch.github.io/metabolyseR) - A tool kit for pre-treatment, modelling, feature selection and correlation analyses of metabolomics data
 * [profilePro](https://jasenfinch.github.io/profilePro) - Unified Input and Output for Processing of Metabolomic Profiling Experiments
-* [mzAnnotation](https://jasenfinch.github.io/mzAnnotation) -  Tools for putative annotation of accurate m/z from electrospray ionisation mass spectrometry data
-* [MFassign](https://github.com/jasenfinch/MFassign) - Molecular formula assignment for high resolution ESI metabolomics
-* [construction](https://github.com/jasenfinch/construction) - Consensus structural classifications for putative molecular formula assignments
-* [composition](https://github.com/jasenfinch/composition) - Compositional analyses for metabolomics data
+* [mzAnnotation](https://aberhrml.github.io/mzAnnotation) -  Tools for putative annotation of accurate m/z from electrospray ionisation mass spectrometry data
+* [assignments](https://aberhrml.github.io/assignments) - Molecular formula assignment for high resolution ESI metabolomics
+* [construction](https://jasenfinch.github.io/construction) - Consensus structural classifications for putative molecular formula assignments
 * [riches](https://jasenfinch.github.io/riches) - Structural and functional enrichment for metabolomics data
 * [metaboMisc](https://jasenfinch.github.io/metaboMisc) - A collection of miscellaneous helper and linker functions for metabolomics analyses
 * [metaboWorkflows](https://jasenfinch.github.io/metaboWorkflows) - Workflow Project Templates for Metabolomics Analyses
