@@ -37,7 +37,7 @@ jobs:
         with:
           extra-packages: |
             any::pkgdown 
-            local::
+            local::.
             bioc::BiocParallel
             bioc::MSnbase
           needs: website
