@@ -33,7 +33,6 @@ Easily install, load and update an R package ecosystem for performing analyses o
 * [mzAnnotation](https://jasenfinch.github.io/mzAnnotation) -  Tools for putative annotation of accurate m/z from electrospray ionisation mass spectrometry data
 * [MFassign](https://github.com/jasenfinch/MFassign) - Molecular formula assignment for high resolution ESI metabolomics
 * [construction](https://github.com/jasenfinch/construction) - Consensus structural classifications for putative molecular formula assignments
-* [composition](https://github.com/jasenfinch/composition) - Compositional analyses for metabolomics data
 * [riches](https://jasenfinch.github.io/riches) - Structural and functional enrichment for metabolomics data
 * [metaboMisc](https://jasenfinch.github.io/metaboMisc) - A collection of miscellaneous helper and linker functions for metabolomics analyses
 * [metaboWorkflows](https://jasenfinch.github.io/metaboWorkflows) - Workflow Project Templates for Metabolomics Analyses
